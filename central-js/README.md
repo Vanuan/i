@@ -1,30 +1,29 @@
-**Initial configuration**:
+== How to build
+
+=== Install dependencies
 
     npm install
     cd client
     bower install
     npm install
-    grunt debug
-    cd ..
+
+=== Test
+
     grunt
-
-**After source changes**:
-
     cd client
     grunt debug
-    cd ..
+
+=== Development
+
     grunt
-
-OR
-
-**For development**:
     cd client
     grunt dev
-and in another terminal run the server as usual:
-    grunt
 
-If you need to customize settings in config.js locally, don't change the file locally,
-but create local_config.js and define section to be updated, for example:
+=== Local environment configuration
+
+Do not change `config.js`.
+
+Create `local_config.js` and define section to be updated, e.g.:
 
     module.exports = {
         'server': {
@@ -34,4 +33,4 @@ but create local_config.js and define section to be updated, for example:
             'port': '8001'
         }
     };
-Do not add it to repository though.
+
