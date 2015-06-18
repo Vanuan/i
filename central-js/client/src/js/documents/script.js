@@ -1,4 +1,10 @@
-define('documents', ['angularAMD', 'config', 'service', 'file2/directive', 'file/factory'], function(angularAMD) {
+import angularAMD from 'angularAMD'
+import 'js/service/script'
+import 'js/form/directives/file2';
+import 'js/form/factories/file';
+
+import './controllers/states';
+
   var app = angular.module('Documents', []);
 
   app.config(function($stateProvider) {
@@ -11,7 +17,7 @@ define('documents', ['angularAMD', 'config', 'service', 'file2/directive', 'file
               return $templateCache.get('html/documents/index.html');
             },
             controller: 'DocumentsController',
-            controllerUrl: 'state/documents/controller'
+            controllerUrl: 'js/documents/controllers/states'
           })
         }
       })
@@ -34,7 +40,7 @@ define('documents', ['angularAMD', 'config', 'service', 'file2/directive', 'file
               return $templateCache.get('html/documents/bankid/index.html');
             },
             controller: 'DocumentsBankIdController',
-            controllerUrl: 'state/documents/bankid/controller'
+            controllerUrl: 'js/documents/controllers/states'
           })
         }
       })
@@ -84,7 +90,7 @@ define('documents', ['angularAMD', 'config', 'service', 'file2/directive', 'file
               return $templateCache.get('html/documents/content.html');
             },
             controller: 'DocumentsContentController',
-            controllerUrl: 'state/documents/content/controller'
+            controllerUrl: 'js/documents/controllers/states'
           })
         }
       })
@@ -109,5 +115,3 @@ define('documents', ['angularAMD', 'config', 'service', 'file2/directive', 'file
         }
 	  })
   });
-  return app;
-});

@@ -1,4 +1,5 @@
-define('slotPicker/directive', ['angularAMD'], function (angularAMD) {
+import angularAMD from 'angularAMD';
+
 		angularAMD.directive('slotPicker', function ($http) {
 				return {
 					restrict: 'EA',
@@ -40,5 +41,3 @@ define('slotPicker/directive', ['angularAMD'], function (angularAMD) {
 				};
 			}
 		);
-	}
-);

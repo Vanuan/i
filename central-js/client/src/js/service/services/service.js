@@ -1,4 +1,5 @@
-define('service/service', ['angularAMD'], function(angularAMD) {
+import angularAMD from 'angularAMD';
+
   angularAMD.service('ServiceService', function($http) {
 
   	var docTypes = {
@@ -139,4 +140,3 @@ define('service/service', ['angularAMD'], function(angularAMD) {
 		});
 	};
   });
-});

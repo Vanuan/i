@@ -1,7 +1,22 @@
-define('service', ['angularAMD', 'config', 'index', 'service.general.country', 'service.general.region',
-    'service.general.city', 'region/list/factory', 'locality/list/factory', 'places/service',
-    'service/service', 'messages/service', 'bankid/service', 'activiti/service', 'options/class/directive',
-    'admin/service', 'services/auth/serviceAuthBlock', 'slotPicker/directive'], function (angularAMD) {
+import angularAMD from 'angularAMD';
+import 'js/config';
+import 'js/index/script';
+import './country/script';
+import './region/script';
+import './city/script';
+import './services/places';
+import './services/service';
+import './services/messages';
+import './services/admin';
+import './services/auth/serviceAuthBlock';
+import 'js/places/factories/regionList'
+import 'js/places/factories/localityList'
+import 'js/bankid/services/bankid'
+import 'js/activiti/services/activiti'
+import 'js/components/select/directives/optionsClass'
+import 'js/form/directives/slotPicker'
+import './controllers/states'
+
     var app = angular.module('service', []);
 
     app.config(['$stateProvider', function ($stateProvider) {
@@ -19,7 +34,7 @@ define('service', ['angularAMD', 'config', 'index', 'service.general.country', '
 							return $templateCache.get('html/service/index.html');
 						}],
 						controller: 'ServiceController',
-                        controllerUrl: 'state/service/controller'
+                        controllerUrl: 'js/service/controllers/states'
                     })
                 }
             })
@@ -31,7 +46,7 @@ define('service', ['angularAMD', 'config', 'index', 'service.general.country', '
                                                                     return $templateCache.get('html/service/general.html');
                                                             }],
                                                             controller: 'ServiceGeneralController',
-                                    controllerUrl: 'state/service/general/controller'
+                                    controllerUrl: 'js/service/controllers/states'
                                 })
                             }
 			})
@@ -43,7 +58,7 @@ define('service', ['angularAMD', 'config', 'index', 'service.general.country', '
                                                                     return $templateCache.get('html/service/instruction.html');
                                                             }],
                                                             controller: 'ServiceInstructionController',
-                                    controllerUrl: 'state/service/instruction/controller'
+                                    controllerUrl: 'js/service/controllers/states'
                                 })
                             }
 			})
@@ -55,7 +70,7 @@ define('service', ['angularAMD', 'config', 'index', 'service.general.country', '
                                                                     return $templateCache.get('html/service/legislation.html');
                                                             }],
                                                             controller: 'ServiceLegislationController',
-                                    controllerUrl: 'state/service/legislation/controller'
+                                    controllerUrl: 'js/service/controllers/states'
                                 })
                             }
 			})
@@ -67,7 +82,7 @@ define('service', ['angularAMD', 'config', 'index', 'service.general.country', '
                                                                     return $templateCache.get('html/service/questions.html');
                                                             }],
                                                             controller: 'ServiceQuestionsController',
-                                    controllerUrl: 'state/service/questions/controller'
+                                    controllerUrl: 'js/service/controllers/states'
                                 })
                             }
 			})
@@ -79,11 +94,9 @@ define('service', ['angularAMD', 'config', 'index', 'service.general.country', '
                                                                     return $templateCache.get('html/service/discussion.html');
                                                             }],
                                                             controller: 'ServiceDiscussionController',
-                                    controllerUrl: 'state/service/discussion/controller'
+                                    controllerUrl: 'js/service/controllers/states'
                                 })
                             }
 			})
     }]);
-    return app;
-});
 

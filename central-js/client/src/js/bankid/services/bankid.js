@@ -1,4 +1,5 @@
-define('bankid/service', ['angularAMD'], function (angularAMD) {
+import angularAMD from 'angularAMD';
+
     angularAMD.factory('BankIDService', ['$http', '$q', 'AdminService', function ($http, $q, AdminService) {
         var bankIDLogin;
         var bankIDAccount;
@@ -57,4 +58,3 @@ define('bankid/service', ['angularAMD'], function (angularAMD) {
             }
         }
     }]);
-});

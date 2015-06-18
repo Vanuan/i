@@ -1,4 +1,9 @@
-define('locality/list/factory', ['angularAMD', 'typeahead/empty/directive', 'bootstrap/typeahead/factory', 'bootstrap/dropdown/factory'], function (angularAMD) {
+import angularAMD from 'angularAMD';
+
+import 'js/components/typeahead/directives/typeaheadEmpty';
+import 'js/components/typeahead/factories/typeahead';
+import 'js/components/dropdown/factories/dropdown';
+
     angularAMD.factory('LocalityListFactory', ['$http', 'TypeaheadFactory', 'DropdownFactory', 'PlacesService', function ($http, TypeaheadFactory, DropdownFactory, PlacesService) {
 		var localityList = function() {
 			this.typeahead = new TypeaheadFactory();
@@ -49,4 +54,3 @@ define('locality/list/factory', ['angularAMD', 'typeahead/empty/directive', 'boo
 		
 		return localityList;
     }]);
-});

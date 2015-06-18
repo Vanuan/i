@@ -1,11 +1,10 @@
-define('state/service/controller', ['angularAMD'], function (angularAMD) {
+import angularAMD from 'angularAMD';
+
 	angularAMD.controller('ServiceController', ['$state', '$rootScope', '$scope', 'service', 'AdminService', function ($state, $rootScope, $scope, service, AdminService) {
 		$scope.service = service;
 		$scope.bAdmin = AdminService.isAdmin();
 	}]);
-});
 
-define('state/service/general/controller', ['angularAMD'], function (angularAMD) {
 	angularAMD.controller('ServiceGeneralController', ['$state', '$rootScope', '$scope', 'service', function ($state, $rootScope, $scope, service) {
 		$scope.service = service;
 		
@@ -33,35 +32,25 @@ define('state/service/general/controller', ['angularAMD'], function (angularAMD)
 		
 		return $state.go('service.general.country', {id: service.nID}, { location: false });
     }]);
-});
 
-
-
-define('state/service/instruction/controller', ['angularAMD'], function (angularAMD) {
 	angularAMD.controller('ServiceInstructionController', ['$state', '$rootScope', '$scope', 'service', 'AdminService', function ($state, $rootScope, $scope, service, AdminService) {
 		$scope.service = service;
 		$scope.bAdmin = AdminService.isAdmin();
 		return $state.go('service.instruction', {id: service.nID, service: service}, { location: false });
     }]);
-});
 
-define('state/service/legislation/controller', ['angularAMD'], function (angularAMD) {
 	angularAMD.controller('ServiceLegislationController', ['$state', '$rootScope', '$scope', 'service', 'AdminService', function ($state, $rootScope, $scope, service, AdminService) {
 		$scope.service = service;
 		$scope.bAdmin = AdminService.isAdmin();
 		return $state.go('service.legislation', {id: service.nID, service: service}, { location: false });
     }]);
-});
 
-define('state/service/questions/controller', ['angularAMD'], function (angularAMD) {
 	angularAMD.controller('ServiceQuestionsController', ['$state', '$rootScope', '$scope', 'service', 'AdminService', function ($state, $rootScope, $scope, service, AdminService) {
 		$scope.service = service;
 		$scope.bAdmin = AdminService.isAdmin();
 		return $state.go('service.questions', {id: service.nID, service: service}, { location: false });
     }]);
-});
 
-define('state/service/discussion/controller', ['angularAMD'], function (angularAMD) {
 	angularAMD.controller('ServiceDiscussionController', ['$state', '$rootScope', '$scope', 'service', function ($state, $rootScope, $scope, service) {
 		$scope.service = service;
 
@@ -80,4 +69,3 @@ define('state/service/discussion/controller', ['angularAMD'], function (angularA
 
 		return $state.go('service.discussion', {id: service.nID, service: service}, { location: false });
     }]);
-});

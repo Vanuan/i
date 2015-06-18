@@ -1,4 +1,7 @@
-define('service.general.country.link', ['angularAMD', 'service.link'], function (angularAMD) {
+import angularAMD from 'angularAMD';
+import 'js/service/link/script';
+import 'js/service/link/controllers/link';
+
     var app = angular.module('service.general.country.link', []);
 
     app.config(['$stateProvider', function ($stateProvider) {
@@ -11,11 +14,8 @@ define('service.general.country.link', ['angularAMD', 'service.link'], function 
 							return $templateCache.get('html/service/country/link/index.html');
 						}],
 						controller: 'ServiceLinkController',
-                        controllerUrl: 'service/link/controller'
+                        controllerUrl: 'js/service/link/controllers/link'
                     })
                 }
             })
     }]);
-    return app;
-});
-

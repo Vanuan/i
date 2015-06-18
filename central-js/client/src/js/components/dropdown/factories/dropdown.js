@@ -1,4 +1,5 @@
-define('bootstrap/dropdown/factory', ['angularAMD'], function (angularAMD) {
+import angularAMD from 'angularAMD';
+
     angularAMD.factory('DropdownFactory', [function () {
 		var dropdown = function() {
 			this.model = null;
@@ -22,4 +23,3 @@ define('bootstrap/dropdown/factory', ['angularAMD'], function (angularAMD) {
 		
 		return dropdown;
     }]);
-});

@@ -1,4 +1,5 @@
-define('config', ['angularAMD'], function(angularAMD) {
+import angularAMD from 'angularAMD';
+
 	angularAMD.value('config', {
 		client_id: '9b0e5c63-9fcb-4b11-84ff-31fc2cea8801'
 		, sProtocol_AccessService_BankID: 'https' //Test
@@ -10,5 +11,3 @@ define('config', ['angularAMD'], function(angularAMD) {
 		//, sProtocol_ResourceService_BankID: 'https' //Prod
                 //, sHost_ResourceService_BankID: 'biprocessing.org.ua' //Prod
 	});
-	return angularAMD;
-});

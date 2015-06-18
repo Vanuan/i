@@ -1,4 +1,5 @@
-define('catalog/service', ['angularAMD'], function(angularAMD) {
+import angularAMD from 'angularAMD'
+
   angularAMD.service('CatalogService', function($http) {
     this.getServices = function(sFind) {
       var data = {
@@ -12,4 +13,3 @@ define('catalog/service', ['angularAMD'], function(angularAMD) {
       });
     };
   });
-});

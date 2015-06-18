@@ -1,4 +1,5 @@
-define('typeahead/empty/directive', ['angularAMD'], function (angularAMD) {
+import angularAMD from 'angularAMD';
+
 	var secretEmptyKey = '[$empty$]';
 	
 	angularAMD.directive('typeaheadEmpty', ['$timeout', function ($timeout) {
@@ -31,4 +32,3 @@ define('typeahead/empty/directive', ['angularAMD'], function (angularAMD) {
 			}
 		}
 	}]);
-});

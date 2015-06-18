@@ -1,4 +1,5 @@
-define('places/service', ['angularAMD'], function (angularAMD) {
+import angularAMD from 'angularAMD';
+
     angularAMD.service('PlacesService', function ($http) {
 		
 		this.getRegions = function() {

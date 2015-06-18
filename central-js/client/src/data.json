@@ -3,36 +3,36 @@
         "stateName": "404",
         "urlPrefix": "/404",
         "type": "ngload",
-        "src": "404"
+        "src": "js/404/script"
     },
     {
         "stateName": "index",
         "urlPrefix": "/",
         "type": "ngload",
-        "src": "index"
+        "src": "js/index/script"
     },
     {
         "stateName": "documents",
         "urlPrefix": "/documents",
         "type": "ngload",
-        "src": "documents"
+        "src": "js/documents/script"
     },
     {
         "stateName": "journal",
         "urlPrefix": "/journal",
         "type": "ngload",
-        "src": "journal"
+        "src": "js/journal/script"
     },
     {
         "stateName": "about",
         "urlPrefix": "/about",
         "type": "ngload",
-        "src": "about"
+        "src": "js/about/script"
     },
     {
         "stateName": "service",
         "urlPrefix": "/service",
         "type": "ngload",
-        "src": "service"
+        "src": "js/service/script"
     }
 ]

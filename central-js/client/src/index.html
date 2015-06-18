@@ -6,35 +6,115 @@
 	<base href="/">
 	<link href='//fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=cyrillic,cyrillic-ext,latin' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
-    <!-- build:style bundle -->
-	<!-- /build -->
     <script>
         dataLayer = [];
     </script>
 </head>
 <body>
-            <!-- Google Tag Manager -->
-    <noscript>
-        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-WXGXTJ"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
-    <script>
-        (function (w, d, s, l, i) {w[l] = w[l] || []; w[l].push({'gtm.start':
-        new Date().getTime(), event: 'gtm.js'}); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-        '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-WXGXTJ');
-    </script>
-    <!-- End Google Tag Manager -->
-	<!-- build:section layout.header -->
-    <!-- /build -->
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container" style="height: 90px;">
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<div class="navbar-header">
+			<a style="margin-top: 10px;" class="navbar-brand" href="/">iGov.org.ua</a>
+			<br>
+			<p class="sitename">портал державних послуг</p>
+		</div>
+                <div class="navbar-header">
+			<br>
+			<p class="sitename" style="display: none; color:red;">Увага: сайт в процесі розробки!</p>
+		</div>
+            
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li style="height: 90px;" class="menu-item" ui-sref-active="selected">
+                                    
+					<a style="margin-top: 5px;" ui-sref="index">
+						<h4>Послуги</h4>
+					</a>
+				</li>
+				<li style="height: 90px;" class="menu-item" ui-sref-active="selected">
+					<a style="margin-top: 5px;" ui-sref="documents">
+						<h4>Документи</h4>
+					</a>
+				</li>
+				<li style="height: 90px;" class="menu-item" ui-sref-active="selected">
+					<a style="margin-top: 5px;" ui-sref="journal">
+						<h4>Мій журнал</h4>
+					</a>
+				</li>
+				<li style="height: 90px;" class="menu-item" ui-sref-active="selected">
+					<a style="margin-top: 5px;" ui-sref="about">
+						<h4>Про портал</h4>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
 	<div ui-view="">
 		<div class="text-center">
 			<img class="text-center" src="/img/loading.gif" alt="Loading" />
 		</div>
 	</div>
-	<!-- build:section layout.footer -->
-    <!-- /build -->
-	<script data-main="./js/main" src="./js/require.js"></script>
+<footer class="footer">
+	<div class="container" style="margin-top: 10px;margin-bottom: 5px; line-height: 20px;">
+            <table style="width: 100%">
+                <tr>
+                    <td>
+                        <!--p class="text-muted text-left"-->
+                        <table>
+                            <tr>
+                                <td style="width:200px;">
+                                    <p class="text-muted text-center">
+                                        <a href="https://docs.google.com/forms/d/1uXt5BEVAWBhftuDNWQTUUJJp_etYKhXyh70kCdznCqY/viewform">Державним органам:
+                                            <br>додати свою послугу</a> 
+                                    </p>
+                                </td>
+                                <td style="width:200px;">
+                                    <p class="text-muted text-center">
+                                        <a href="https://docs.google.com/forms/d/1zyLyRcsL0wnB_VQeondrULHsEUi1dIaUSLJVWsdzbDY/viewform">Немає якоїсь
+                                            <br>послуги?</a> 
+                                    </p>
+                                </td>
+                                <td style="width:200px;">
+                                    <p class="text-muted text-center">
+                                        <a href="https://www.facebook.com/igov.org.ua">Новини порталу
+                                            <br>на Facebook</a> 
+                                    </p>
+                                </td>
+                                <td style="width:200px;">
+                                    <p class="text-muted text-center">
+                                        <a href="https://docs.google.com/forms/d/1ueU6PQa-OSA2Tsisxx2RbRWRJ9rLsFlPBlHsr7W-4gE/viewform">Помилка або баг
+                                            <br>на Порталі?</a> 
+                                    </p>
+                                </td>
+                                
+                                
+                            </tr>
+                        </table>
+                        <!--/p-->
+                    </td>
+                    <td>
+                        <p class="text-muted text-right">
+                            Зроблено ІТ-волонтерами
+                            <br>alpha-версія
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <!--p class="text-muted text-center"> iGov.org.ua @ Зроблено ІТ-волонтерами України</p-->
+	</div>
+</footer>
+  <script src="jspm_packages/system.js"></script>
+  <script src="config.js"></script>
+  <script>
+  window.define = System.amdDefine.bind(System);
+  window.require = window.requirejs = System.amdRequire.bind(System);
+  System.import('js/app');
+  </script>
 </body>
 </html>

@@ -1,4 +1,5 @@
-define('options/class/directive', ['angularAMD'], function (angularAMD) {
+import angularAMD from 'angularAMD';
+
 	var NG_OPTIONS_REGEXP = /^\s*([\s\S]+?)(?:\s+as\s+([\s\S]+?))?(?:\s+group\s+by\s+([\s\S]+?))?(?:\s+disable\s+when\s+([\s\S]+?))?\s+for\s+(?:([\$\w][\$\w]*)|(?:\(\s*([\$\w][\$\w]*)\s*,\s*([\$\w][\$\w]*)\s*\)))\s+in\s+([\s\S]+?)(?:\s+track\s+by\s+([\s\S]+?))?$/;
 	angularAMD.directive('optionsClass', function ($parse, $timeout) {
 		return {
@@ -38,4 +39,3 @@ define('options/class/directive', ['angularAMD'], function (angularAMD) {
 			}
 		};
 	});
-});

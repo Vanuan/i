@@ -1,4 +1,6 @@
-define('state/index/controller', ['angularAMD', 'service'], function(angularAMD) {
+import angularAMD from 'angularAMD';
+import 'js/service/script';
+
     angularAMD.controller('IndexController', function($scope, $rootScope, $timeout, CatalogService, catalog, AdminService, $filter) {
         $scope.catalog = catalog;
         $scope.catalogCounts = {0:0,1:0,2:0};
@@ -124,9 +126,7 @@ define('state/index/controller', ['angularAMD', 'service'], function(angularAMD)
             });
         });
     });
-});
 
-define('state/subcategory/controller', ['angularAMD'], function(angularAMD) {
     angularAMD.controller('SubcategoryController', function($scope, $stateParams, catalog, $filter) {
             $scope.catalog = catalog;
 
@@ -134,4 +134,3 @@ define('state/subcategory/controller', ['angularAMD'], function(angularAMD) {
             $scope.subcategory = $filter('filter')($scope.category.aSubcategory, {nID: $stateParams.scatID})[0];
         }
     );
-});

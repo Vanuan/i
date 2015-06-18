@@ -1,13 +1,13 @@
-define('service/built-in/controller', ['angularAMD'], function(angularAMD) {
+import angularAMD from 'angularAMD';
+import 'js/form/factories/formData';
+
   angularAMD.controller('ServiceBuiltInController', ['$location', '$state', '$rootScope', '$scope', 'config', function($location, $state, $rootScope, $scope, config) {
     $scope.$location = $location;
     $scope.$state = $state;
 	
 	$scope.config = config;
   }]);
-});
 
-define('service/built-in/bankid/controller', ['angularAMD', 'formData/factory'], function(angularAMD) {
 	angularAMD.controller('ServiceBuiltInBankIDController', [
 		'$state', '$stateParams', '$scope', 'FormDataFactory', 'ActivitiService', 'oServiceData', 'BankIDAccount', 'ActivitiForm', 'uiUploader', '$sce',
 		function($state, $stateParams, $scope, FormDataFactory, ActivitiService, oServiceData, BankIDAccount, ActivitiForm, uiUploader, $sce) {
@@ -135,4 +135,3 @@ define('service/built-in/bankid/controller', ['angularAMD', 'formData/factory'],
       };
     }
   ]);
-});

@@ -1,4 +1,5 @@
-define('service.general.city.built-in', ['angularAMD'], function (angularAMD) {
+import angularAMD from 'angularAMD';
+
     var app = angular.module('service.general.city.built-in', []);
 
     app.config(['$stateProvider', function ($stateProvider) {
@@ -11,7 +12,7 @@ define('service.general.city.built-in', ['angularAMD'], function (angularAMD) {
 							return $templateCache.get('html/service/city/built-in/index.html');
 						}],
 						controller: 'ServiceBuiltInController',
-                        controllerUrl: 'service/built-in/controller'
+                        controllerUrl: 'js/service/built-in/controllers/built-in'
                     })
                 }
             })
@@ -97,7 +98,7 @@ define('service.general.city.built-in', ['angularAMD'], function (angularAMD) {
 							return $templateCache.get('html/service/city/built-in/bankid.html');
 						}],
 						controller: 'ServiceBuiltInBankIDController',
-						controllerUrl: 'service/built-in/bankid/controller'
+						controllerUrl: 'js/service/built-in/controllers/built-in'
 					})
 				}
 			})
@@ -123,6 +124,3 @@ define('service.general.city.built-in', ['angularAMD'], function (angularAMD) {
 				}
 			});
     }]);	
-    return app;
-});
-

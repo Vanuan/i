@@ -1,4 +1,7 @@
-define('index', ['angularAMD', 'catalog/service'], function(angularAMD) {
+import angularAMD from 'angularAMD';
+import './services/catalog';
+import './controllers/states';
+
   var app = angular.module('index', []);
 
   app.config(function($stateProvider) {
@@ -16,7 +19,7 @@ define('index', ['angularAMD', 'catalog/service'], function(angularAMD) {
               return $templateCache.get('html/catalog/services.html');
             },
             controller: 'IndexController',
-            controllerUrl: 'state/index/controller'
+            controllerUrl: 'js/index/controllers/states'
           })
         }
       })
@@ -33,7 +36,7 @@ define('index', ['angularAMD', 'catalog/service'], function(angularAMD) {
               return $templateCache.get('html/catalog/subcategory.html');
             },
             controller: 'SubcategoryController',
-            controllerUrl: 'state/subcategory/controller'
+            controllerUrl: 'js/index/controllers/states'
           })
         }
       });
@@ -41,7 +44,4 @@ define('index', ['angularAMD', 'catalog/service'], function(angularAMD) {
   }).run(function($rootScope, $state) {
     $rootScope.state = $state;
   });
-
-  return app;
-});
 

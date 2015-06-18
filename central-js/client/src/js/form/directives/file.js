@@ -1,4 +1,5 @@
-define('file/directive', ['angularAMD'], function (angularAMD) {
+import angularAMD from 'angularAMD';
+
 	angularAMD.directive('fileField', ['uiUploader', function() {
 		return {
 			require:'ngModel',
@@ -27,4 +28,3 @@ define('file/directive', ['angularAMD'], function (angularAMD) {
 			transclude:true
 		};
 	}]);
-});

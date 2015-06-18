@@ -1,4 +1,5 @@
-define('state/service/region/controller', ['angularAMD'], function (angularAMD) {
+import angularAMD from 'angularAMD';
+
 	angularAMD.controller('ServiceRegionController', [
 		'$state', '$rootScope', '$scope', '$sce', 'RegionListFactory', 'PlacesService', 'ServiceService', 'service', 'regions', 'AdminService',
 		function ($state, $rootScope, $scope, $sce, RegionListFactory, PlacesService, ServiceService, service, regions, AdminService) {
@@ -62,4 +63,3 @@ define('state/service/region/controller', ['angularAMD'], function (angularAMD) 
 			});
 		}
 	]);
-});

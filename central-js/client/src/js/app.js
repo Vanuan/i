@@ -1,4 +1,21 @@
-define(['angularAMD', 'templates'], function(angularAMD) {
+import ui_router_extras from 'christopherthielen/ui-router-extras';
+import ui_routes from 'angular-ui/ui-router';
+import ngMessages from 'angular-messages';
+import ngBootstrap from 'angular-bootstrap';
+import ngUiUtils from 'angular-ui-utils';
+import ZeroClipboard from 'zeroclipboard';
+window.ZeroClipboard = ZeroClipboard;
+import ngClip from 'ng-clip';
+import jquery_cookies from 'jquery.cookie';
+import jquery from 'jquery';
+window.$ = jquery;
+import angularAMD from 'angularAMD';
+
+import templates from 'templates';
+
+import 'bootstrap/css/bootstrap.css!';
+import 'src/styles/custom.css!';
+
   var app = angular.module("main",
     ['ct.ui.router.extras', 'templates-main', 'ngMessages', 'ui.bootstrap',
       'ui.uploader', 'ui.event', 'ngClipboard'
@@ -11,7 +28,7 @@ define(['angularAMD', 'templates'], function(angularAMD) {
   app.config(function($futureStateProvider) {
     var ngloadStateFactory = function($q, futureState) {
       var ngloadDeferred = $q.defer();
-      require(["ngload!" + futureState.src, 'ngload', 'angularAMD'], function ngloadCallback (result, ngload, angularAMD) {
+      System.import(futureState.src).then(function (module) {
         angularAMD.processQueue();
         ngloadDeferred.resolve(undefined);
       });
@@ -36,5 +53,3 @@ define(['angularAMD', 'templates'], function(angularAMD) {
   });
 
   angularAMD.bootstrap(app);
-  return app;
-});

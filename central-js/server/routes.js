@@ -1,8 +1,26 @@
 'use strict';
 var express = require('express');
+var fs = require('fs');
+
+var environment = process.env.NODE_ENV;
 
 module.exports = function(app) {
-	app.use('/', express.static(__dirname + '../../client/build/'));
+        if (environment === 'development') {
+          app.use('/', express.static(__dirname + '../../client/'));
+          app.use('/img/', express.static(__dirname + '/../client/src/img/'));
+          app.use('/data.json', function(req, res, next) {
+            res.send(fs.readFileSync(__dirname + '/../client/src/data.json'));
+            next();
+          });
+          app.use('/config.js', function(req, res, next) {
+            res.send(fs.readFileSync(__dirname + '/../client/config.js'));
+            next();
+          });
+          app.use('/jspm_packages', express.static(__dirname + '../../client/jspm_packages'));
+          app.use('/build', express.static(__dirname + '/../client/build'));
+        } else {
+          app.use('/', express.static(__dirname + '/../client/build'));
+        }
 	app.use('/api/auth', require('./api/auth'));
 	app.use('/api/account', require('./api/account/index'));
 	app.use('/api/bankid', require('./api/bankid'));

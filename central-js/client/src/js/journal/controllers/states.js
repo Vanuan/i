@@ -1,4 +1,5 @@
-define('state/journal/controller', ['angularAMD'], function (angularAMD) {
+import angularAMD from 'angularAMD';
+
 	angularAMD.controller('JournalController', ['$scope', '$state', 'config', 'BankIDService', function ($scope, $state, config, BankIDService) {
 		$scope.config = config;
 
@@ -12,9 +13,7 @@ define('state/journal/controller', ['angularAMD'], function (angularAMD) {
             }
         });
     }]);
-});
 
-define('state/journal/bankid/controller', ['angularAMD'], function (angularAMD) {
 	angularAMD.controller('JournalBankIdController', ['$rootScope', '$scope', '$location', '$state', '$window', function ($rootScope, $scope, $location, $state, $window) {
 
         $scope.loginWithBankId = function () {
@@ -28,8 +27,7 @@ define('state/journal/bankid/controller', ['angularAMD'], function (angularAMD) 
 			return $state.go('journal.content', {code: $state.params.code});
         }
     }]);
-});
-define('state/journal/content/controller', ['angularAMD'], function (angularAMD) {
+
 	angularAMD.controller('JournalContentController', [
         '$rootScope', '$scope', '$state', 'journal',
         function ($rootScope, $scope, $state, journal) {
@@ -39,4 +37,3 @@ define('state/journal/content/controller', ['angularAMD'], function (angularAMD)
             });
         }
     ]);
-});

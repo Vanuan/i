@@ -1,4 +1,9 @@
-define('region/list/factory', ['angularAMD', 'typeahead/empty/directive', 'bootstrap/typeahead/factory', 'bootstrap/dropdown/factory'], function (angularAMD) {
+import angularAMD from 'angularAMD';
+
+import 'js/components/typeahead/directives/typeaheadEmpty';
+import 'js/components/typeahead/factories/typeahead';
+import 'js/components/dropdown/factories/dropdown';
+
     angularAMD.factory('RegionListFactory', ['$http', 'TypeaheadFactory', 'DropdownFactory', 'PlacesService', function ($http, TypeaheadFactory, DropdownFactory, PlacesService) {
 		var regionList = function() {
 			this.typeahead = new TypeaheadFactory();
@@ -60,4 +65,3 @@ define('region/list/factory', ['angularAMD', 'typeahead/empty/directive', 'boots
 		
 		return regionList;
     }]);
-});

@@ -1,4 +1,7 @@
-define('service.general.city.link', ['angularAMD'], function (angularAMD) {
+import angularAMD from 'angularAMD';
+
+import 'js/service/link/controllers/link';
+
     var app = angular.module('service.general.city.link', []);
 
     app.config(['$stateProvider', function ($stateProvider) {
@@ -11,11 +14,8 @@ define('service.general.city.link', ['angularAMD'], function (angularAMD) {
 							return $templateCache.get('html/service/city/link/index.html');
 						}],
 						controller: 'ServiceLinkController',
-                        controllerUrl: 'service/link/controller'
+                        controllerUrl: 'js/service/link/controllers/link'
                     })
                 }
             })
     }]);
-    return app;
-});
-

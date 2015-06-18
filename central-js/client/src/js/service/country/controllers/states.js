@@ -1,4 +1,5 @@
-define('state/service/country/controller', ['angularAMD'], function (angularAMD) {
+import angularAMD from 'angularAMD';
+
 	angularAMD.controller('ServiceCountryController', ['$state', '$rootScope', '$scope', '$sce', 'service', 'AdminService',
 		function ($state, $rootScope, $scope, $sce, service, AdminService) {
 			$scope.service = service;
@@ -36,10 +37,7 @@ define('state/service/country/controller', ['angularAMD'], function (angularAMD)
 			$scope.step1();
 		}
 	]);
-});
 
-
-define('state/service/country/absent/controller', ['angularAMD'], function (angularAMD) {
 	angularAMD.controller('ServiceCountryAbsentController', [
         '$state',
         '$rootScope',
@@ -106,4 +104,3 @@ define('state/service/country/absent/controller', ['angularAMD'], function (angu
             }
 	    }
     ]);
-});

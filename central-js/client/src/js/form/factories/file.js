@@ -1,4 +1,5 @@
-define('file/factory', ['angularAMD'], function(angularAMD) {
+import angularAMD from 'angularAMD';
+
   angularAMD.factory('FileFactory', function($q, $rootScope, ActivitiService, uiUploader) {
     var file = function() {
       this.fileName = null;
@@ -55,4 +56,3 @@ define('file/factory', ['angularAMD'], function(angularAMD) {
 
     return file;
   });
-});

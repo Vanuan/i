@@ -1,4 +1,5 @@
-define('activiti/service', ['angularAMD'], function(angularAMD) {
+import angularAMD from 'angularAMD';
+
 	angularAMD.service('ActivitiService', ['$http', function($http) {
 		this.getForm = function(oServiceData, processDefinitionId) {
 			//var url = oServiceData.sURL + oServiceData.oData.sPath + '?processDefinitionId=' + processDefinitionId;
@@ -33,4 +34,3 @@ define('activiti/service', ['angularAMD'], function(angularAMD) {
 			formData.params[propertyID].value = fileUUID;
 		}
 	}]);
-});

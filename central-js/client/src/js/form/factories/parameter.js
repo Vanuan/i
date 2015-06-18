@@ -1,4 +1,5 @@
-define('parameter/factory', ['angularAMD'], function (angularAMD) {
+import angularAMD from 'angularAMD';
+
     angularAMD.factory('ParameterFactory', function () {
         var parameter = function () {
             this.value = null;
@@ -10,4 +11,3 @@ define('parameter/factory', ['angularAMD'], function (angularAMD) {
 
         return parameter;
     });
-});

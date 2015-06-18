@@ -1,4 +1,6 @@
-define('bankid/documents/factory', ['angularAMD', 'bankid/documents/passport/factory'], function (angularAMD) {
+import angularAMD from 'angularAMD';
+import 'js/bankid/factories/passport';
+
 	angularAMD.factory('BankIDDocumentsFactory', [
 		'BankIDDocumentsPassportFactory',
 		function(PassportFactory) {
@@ -34,4 +36,3 @@ define('bankid/documents/factory', ['angularAMD', 'bankid/documents/passport/fac
 			return documents;
 		}
 	]);
-});

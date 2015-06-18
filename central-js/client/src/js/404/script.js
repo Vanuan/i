@@ -1,4 +1,5 @@
-define('404', ['angularAMD'], function (angularAMD) {
+import angularAMD from 'angularAMD'
+
     var app = angular.module('404', []);
 
     app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
@@ -15,5 +16,3 @@ define('404', ['angularAMD'], function (angularAMD) {
                 }
             })
     }]);
-    return app;
-});

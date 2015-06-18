@@ -1,4 +1,8 @@
-define('service.general.city', ['angularAMD', 'service.general.city.link', 'service.general.city.built-in'], function (angularAMD) {
+import angularAMD from 'angularAMD';
+import './link/script';
+import './built-in/script';
+import './controllers/states';
+
     var app = angular.module('service.general.city', []);
 
     app.config(['$stateProvider', function ($stateProvider) {
@@ -36,7 +40,7 @@ define('service.general.city', ['angularAMD', 'service.general.city.link', 'serv
 							return $templateCache.get('html/service/city/index.html');
 						}],
 						controller: 'ServiceCityController',
-                        controllerUrl: 'state/service/city/controller'
+                        controllerUrl: 'js/service/city/controllers/states'
                     }),
 					'content@service.general.city': angularAMD.route({
                         templateProvider: ['$templateCache', function($templateCache) {
@@ -53,10 +57,8 @@ define('service.general.city', ['angularAMD', 'service.general.city.link', 'serv
 							return $templateCache.get('html/service/city/absent.html');
 						}],
                         controller: 'ServiceCityAbsentController',
-                        controllerUrl: 'state/service/city/absent/controller'
+                        controllerUrl: 'js/service/city/controllers/states'
                     })
                 }
             })
     }]);
-    return app;
-});

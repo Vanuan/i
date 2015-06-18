@@ -1,5 +1,3 @@
-define('service.link', ['angularAMD'], function (angularAMD) {
-    var app = angular.module('service.link', []);
-    return app;
-});
+import angularAMD from 'angularAMD';
 
+angular.module('service.link', []);

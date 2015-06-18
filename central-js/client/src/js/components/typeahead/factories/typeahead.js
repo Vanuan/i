@@ -1,4 +1,5 @@
-define('bootstrap/typeahead/factory', ['angularAMD'], function (angularAMD) {
+import angularAMD from 'angularAMD';
+
 	var secretEmptyKey = '[$empty$]';
 
     angularAMD.factory('TypeaheadFactory', ['$q', '$http', '$timeout', function ($q, $http, $timeout) {
@@ -43,4 +44,3 @@ define('bootstrap/typeahead/factory', ['angularAMD'], function (angularAMD) {
 		
 		return typeahead;
     }]);
-});

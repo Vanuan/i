@@ -1,4 +1,8 @@
-define('service.general.region', ['angularAMD', 'service.general.region.link', 'service.general.region.built-in'], function (angularAMD) {
+import angularAMD from 'angularAMD';
+import './link/script';
+import './built-in/script';
+import './controllers/states';
+
     var app = angular.module('service.general.region', []);
 
     app.config(['$stateProvider', function ($stateProvider) {
@@ -35,7 +39,7 @@ define('service.general.region', ['angularAMD', 'service.general.region.link', '
 							return $templateCache.get('html/service/region/index.html');
 						}],
 						controller: 'ServiceRegionController',
-                        controllerUrl: 'state/service/region/controller'
+                        controllerUrl: 'js/service/region/controller/states'
                     }),
 					'content@service.general.region': angularAMD.route({
                         templateProvider: ['$templateCache', function($templateCache) {
@@ -55,6 +59,3 @@ define('service.general.region', ['angularAMD', 'service.general.region.link', '
                 }
             })
     }]);
-    return app;
-});
-

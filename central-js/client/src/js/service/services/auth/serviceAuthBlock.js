@@ -1,4 +1,4 @@
-define('services/auth/serviceAuthBlock', ['angularAMD'], function (angularAMD) {
+import angularAMD from 'angularAMD';
 
 	angularAMD.directive('serviceAuthBlock', function () {
 		return {
@@ -18,4 +18,3 @@ define('services/auth/serviceAuthBlock', ['angularAMD'], function (angularAMD) {
 		};
 	});
 
-});

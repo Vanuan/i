@@ -1,4 +1,5 @@
-define('datepicker/factory', ['angularAMD'], function(angularAMD) {
+import angularAMD from 'angularAMD';
+
   angularAMD.factory('DatepickerFactory', function($filter) {
     var datepicker = function() {
       this.value = null;
@@ -28,4 +29,3 @@ define('datepicker/factory', ['angularAMD'], function(angularAMD) {
 
     return datepicker;
   });
-});

@@ -1,4 +1,6 @@
-define('service.general.region.link', ['angularAMD'], function (angularAMD) {
+import angularAMD from 'angularAMD';
+import 'js/service/link/controllers/link';
+
     var app = angular.module('service.general.region.link', []);
 
     app.config(['$stateProvider', function ($stateProvider) {
@@ -11,11 +13,8 @@ define('service.general.region.link', ['angularAMD'], function (angularAMD) {
 							return $templateCache.get('html/service/region/link/index.html');
 						}],
 						controller: 'ServiceLinkController',
-                        controllerUrl: 'service/link/controller'
+                        controllerUrl: 'js/service/link/controllers/link'
                     })
                 }
             })
     }]);
-    return app;
-});
-

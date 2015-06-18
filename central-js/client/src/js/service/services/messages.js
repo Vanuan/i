@@ -1,4 +1,5 @@
-define('messages/service', ['angularAMD'], function (angularAMD) {
+import angularAMD from 'angularAMD';
+
 	angularAMD.service('MessagesService', ['$http', function($http) {
 		this.setMessage = function(message, userMessage) {
 			var data = {
@@ -14,4 +15,3 @@ define('messages/service', ['angularAMD'], function (angularAMD) {
 			});
 		};
 	}]);
-});

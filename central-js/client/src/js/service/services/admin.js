@@ -1,4 +1,4 @@
-define('admin/service', ['angularAMD'], function (angularAMD) {
+import angularAMD from 'angularAMD';
 
 	angularAMD.service('AdminService', [function () {
 		var cookieKey = 'admin';
@@ -20,4 +20,3 @@ define('admin/service', ['angularAMD'], function (angularAMD) {
 			return true;
 		};
 	}]);
-});

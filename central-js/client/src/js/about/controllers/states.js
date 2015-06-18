@@ -1,5 +1,4 @@
-define('state/about/controller', ['angularAMD'], function (angularAMD) {
-	angularAMD.controller('AboutController', ['$rootScope', function ($rootScope) {
+import angularAMD from 'angularAMD';
 
+	angularAMD.controller('AboutController', ['$rootScope', function ($rootScope) {
     }]);
-});

@@ -1,4 +1,5 @@
-define('file2/directive', ['angularAMD'], function (angularAMD) {
+import angularAMD from 'angularAMD';
+
 	angularAMD.directive('fileUploadA', ['uiUploader', function() {
 		return {
 			restrict: 'A',
@@ -22,9 +23,7 @@ define('file2/directive', ['angularAMD'], function (angularAMD) {
 			}
 		};
 	}]);
-});
 
-define('file/upload/button/directive', ['angularAMD'], function (angularAMD) {
 	angularAMD.directive('fileUploadButton', ['uiUploader', function() {
 		return {
 			restrict: 'A',
@@ -39,4 +38,3 @@ define('file/upload/button/directive', ['angularAMD'], function (angularAMD) {
 			}
 		};
 	}]);
-});

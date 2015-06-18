@@ -1,4 +1,8 @@
-define('service.general.country', ['angularAMD', 'service.general.country.link', 'service.general.country.built-in'], function (angularAMD) {
+import angularAMD from 'angularAMD';
+import './link/script';
+import './built-in/script'
+import './controllers/states'
+
     var app = angular.module('service.general.country', []);
 
     app.config(['$stateProvider', function ($stateProvider) {
@@ -11,7 +15,7 @@ define('service.general.country', ['angularAMD', 'service.general.country.link',
 							return $templateCache.get('html/service/country/index.html');
 						}],
 						controller: 'ServiceCountryController',
-                        controllerUrl: 'state/service/country/controller'
+                        controllerUrl: 'js/service/country/controllers/states'
                     })
                 }
             })
@@ -23,10 +27,8 @@ define('service.general.country', ['angularAMD', 'service.general.country.link',
 							return $templateCache.get('html/service/country/absent.html');
 						}],
                         controller: 'ServiceCountryAbsentController',
-                        controllerUrl: 'state/service/country/absent/controller'
+                        controllerUrl: 'js/service/country/controllers/states'
                     })
                 }
             })
     }]);
-    return app;
-});

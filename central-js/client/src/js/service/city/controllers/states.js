@@ -1,4 +1,5 @@
-define('state/service/city/controller', ['angularAMD'], function (angularAMD) {
+import angularAMD from 'angularAMD';
+
 	angularAMD.controller('ServiceCityController', [
 		'$state', '$rootScope', '$scope', '$sce', 'RegionListFactory', 'LocalityListFactory', 'PlacesService', 'ServiceService', 'service', 'regions',
 		function ($state, $rootScope, $scope, $sce, RegionListFactory, LocalityListFactory, PlacesService, ServiceService, service, regions) {
@@ -79,9 +80,7 @@ define('state/service/city/controller', ['angularAMD'], function (angularAMD) {
 			});
 		}
 	]);
-});
 
-define('state/service/city/absent/controller', ['angularAMD'], function (angularAMD) {
 	angularAMD.controller('ServiceCityAbsentController', [
         '$state',
         '$rootScope',
@@ -150,4 +149,3 @@ define('state/service/city/absent/controller', ['angularAMD'], function (angular
             }
 	    }
     ]);
-});

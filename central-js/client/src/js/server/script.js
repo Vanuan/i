@@ -1,4 +1,4 @@
-define('server', ['angularAMD'], function (angularAMD) {
+import 'angularAMD'
     var app = angular.module('server', ['ngMockE2E']);
 
 	app.run(['$http', '$httpBackend', function($http, $httpBackend) {
@@ -21,6 +21,3 @@ define('server', ['angularAMD'], function (angularAMD) {
 
 		$httpBackend.whenGET(/\/api\/auth/).passThrough();
 	}]);
-	
-    return app;
-});

@@ -1,4 +1,6 @@
-define('service.general.region.built-in', ['angularAMD'], function (angularAMD) {
+import angularAMD from 'angularAMD';
+import 'js/service/built-in/controllers/built-in';
+
     var app = angular.module('service.general.region.built-in', []);
 
     app.config(['$stateProvider', function ($stateProvider) {
@@ -11,7 +13,7 @@ define('service.general.region.built-in', ['angularAMD'], function (angularAMD) 
 							return $templateCache.get('html/service/region/built-in/index.html');
 						}],
 						controller: 'ServiceBuiltInController',
-                        controllerUrl: 'service/built-in/controller'
+                        controllerUrl: 'js/service/built-in/controllers/built-in'
                     })
                 }
             })
@@ -90,7 +92,7 @@ define('service.general.region.built-in', ['angularAMD'], function (angularAMD) 
 							return $templateCache.get('html/service/region/built-in/bankid.html');
 						}],
 						controller: 'ServiceBuiltInBankIDController',
-						controllerUrl: 'service/built-in/bankid/controller'
+						controllerUrl: 'js/service/built-in/controllers/built-in'
 					})
 				}
 			})
@@ -113,6 +115,3 @@ define('service.general.region.built-in', ['angularAMD'], function (angularAMD) 
 				}
 			});
     }]);
-    return app;
-});
-

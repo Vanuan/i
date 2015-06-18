@@ -1,4 +1,6 @@
-define('about', ['angularAMD'], function(angularAMD) {
+import angularAMD from 'angularAMD';
+import './controllers/states';
+
   var app = angular.module('about', []);
 
   app.config(function($stateProvider) {
@@ -11,11 +13,8 @@ define('about', ['angularAMD'], function(angularAMD) {
               return $templateCache.get('html/about/index.html');
             },
             controller: 'AboutController',
-            controllerUrl: 'state/about/controller'
+            controllerUrl: 'js/about/controllers/states'
           })
         }
       })
   });
-  return app;
-});
-

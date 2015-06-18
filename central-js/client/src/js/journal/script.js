@@ -1,4 +1,8 @@
-define('journal', ['angularAMD', 'config', 'service'], function (angularAMD) {
+import angularAMD from 'angularAMD';
+import 'js/service/script';
+import 'js/config';
+import './controllers/states';
+
     var app = angular.module('journal', []);
 
     app.config(['$stateProvider', function ($stateProvider) {
@@ -11,7 +15,7 @@ define('journal', ['angularAMD', 'config', 'service'], function (angularAMD) {
 							return $templateCache.get('html/journal/index.html');
 						}],
 						controller: 'JournalController',
-                        controllerUrl: 'state/journal/controller'
+                        controllerUrl: 'js/journal/controllers/states'
                     })
                 }
             })
@@ -24,7 +28,7 @@ define('journal', ['angularAMD', 'config', 'service'], function (angularAMD) {
 							return $templateCache.get('html/journal/bankid/index.html');
 						}],
 						controller: 'JournalBankIdController',
-                        controllerUrl: 'state/journal/bankid/controller'
+                        controllerUrl: 'js/journal/controllers/states'
                     })
                 }
             })
@@ -60,11 +64,8 @@ define('journal', ['angularAMD', 'config', 'service'], function (angularAMD) {
 							return $templateCache.get('html/journal/content.html');
 						}],
 						controller: 'JournalContentController',
-                        controllerUrl: 'state/journal/content/controller'
+                        controllerUrl: 'js/journal/controllers/states'
                     })
                 }
             })
     }]);
-    return app;
-});
-
